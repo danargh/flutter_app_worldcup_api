@@ -42,19 +42,20 @@ class _MatchesScreenState extends State<MatchesScreen> {
                   height: 8,
                 );
               }),
-              itemCount: 10,
+              itemCount: 48,
               itemBuilder: ((context, index) {
                 return GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DetailScreen(match: data![index]),
+                        builder: (context) => DetailScreen(match: data![index].int),
                       ),
                     );
                   },
                   child: Container(
                     color: const Color.fromARGB(255, 237, 237, 237),
+                    height: 130,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Row(
